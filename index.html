@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ob Havo</title>
+    <!-- STYLES CSS LINK -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+  </head>
+  <body>
+    <!-- title -->
+    <h1 class="title">Weather API</h1>
+
+    <!-- weather search city -->
+    <form class="form">
+      <label class="form__title" for="search-city"
+        >Enter a location for weather information</label
+      >
+      <input
+        class="form__input"
+        name="search-city"
+        type="text"
+        autofocus
+        autocomplete="off"
+        placeholder="City name..."
+      />
+    </form>
+
+    <!-- weather card -->
+    <div class="card">
+      <h2 class="card__city">London, Gb</h2>
+      <img
+        class="card__icon"
+        src=""
+        alt="weather icon"
+        width="100"
+        height="100"
+      />
+      <h2 class="card__weather">Rain</h2>
+      <h3 class="card__temp"><span>15</span> °C</h3>
+    </div>
+
+    <!-- loader -->
+    <div class="overlay hidden" id="overlay">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="error hidden">
+      <span class="error__text">you entered the city name incorrectly</span>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="./js/request.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
